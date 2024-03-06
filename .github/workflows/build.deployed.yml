@@ -1,0 +1,14 @@
+name: Build and deply code
+
+#to define whtn the code should be triggered we define the on command as below 
+on: [push,pull_request]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pulling git repo
+        uses: actions/checkout@v4
+      - name: test command
+        run: echo "this is a test line"
+        
